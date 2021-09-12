@@ -1,0 +1,28 @@
+
+  {
+  "images" :{
+  "1": {
+    "name": "",
+    "category": "webDev",
+    "url": "./Step Project Ham Pictures/Step Project Ham/graphic design/graphic-design1.jpg"
+  },
+
+  "2": {
+    "name": "",
+    "category": "graphics",
+    "url": "./Step Project Ham Pictures/Step Project Ham/graphic design/graphic-design1.jpg"
+  },
+
+  "3": {
+    "name": "",
+    "category": "news",
+    "url": "./Step Project Ham Pictures/Step Project Ham/graphic design/graphic-design1.jpg"
+  },
+
+  "4": {
+    "name": "",
+    "category": "wordpress",
+    "url": "./Step Project Ham Pictures/Step Project Ham/graphic design/graphic-design1.jpg"
+  }
+}
+  }
