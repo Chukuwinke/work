@@ -1,6 +1,7 @@
 
-$(document).ready(function(){
-    let linkName;
+const tabs = document.querySelector('.tabs')
+const workImgContainer = document.querySelector('.work-tabs-img__container')
+let linkName;
     $('.services-tabs-content li').first().css('display', 'flex')
     $('.services-tabs__title').click(function(){
         $('.services-tabs__title.tab-active').removeClass('tab-active');
@@ -11,15 +12,34 @@ $(document).ready(function(){
         $('#'+linkName).css('display', 'flex ');
     })
     
-})
+// new work
 
 fetch('pictures.json')
   .then(response => response.json())
-  .then(json => {
-   
-    const links = Object.values(json).filter(items => items.url)
-    console.log(typeof links)
-  
+  .then(data => {
+
+    //function to populate work image container with images
+   const tabSwitcher = (target) => {
+    let linkTab = target.getAttribute("data-work-tab")
+    let links = Object.values(data.images)
+    .filter(items => items.category == linkTab)
+    .map(item => item.url)
+    
+    links.forEach(element => {
+      let imageWrapper = document.createElement('div')
+      console.log(element)
+      imageWrapper.innerHTML = `<img class="product-image" src=${element} />`
+      workImgContainer.appendChild(imageWrapper)
+    });
+    
+   }
+   // clicking a button targets one of the tabs
+    tabs.onclick = (event) => {
+      let target = event.target;
+    
+      if(target.className != 'tabs__title') return;
+      tabSwitcher(target);
+    }
   })
   .catch(error => console.log(error));
 

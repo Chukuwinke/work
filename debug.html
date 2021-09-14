@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./debug.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./debug.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -178,17 +177,17 @@
         </div>
     </section>
     <section class="work-section">
-        <div class="work container">
+        <div class="work ">
             <h2 class="work__header">Our Amazing Work</h2>
             <div class="work__tab ">
                 <ul class="tabs">
-                    <li class="tabs__title all">All</li>
-                    <li class="tabs__title">Graphic Design</li>
-                    <li class="tabs__title">Web Design</li>
-                    <li class="tabs__title">Landing Pages</li>
-                    <li class="tabs__title">Wordpress</li>
+                    <li class="tabs__title" data-work-tab="all">All</li>
+                    <li class="tabs__title" data-work-tab="graphics design">Graphic Design</li>
+                    <li class="tabs__title" data-work-tab="web design">Web Design</li>
+                    <li class="tabs__title" data-work-tab="landing page">Landing Pages</li>
+                    <li class="tabs__title" data-work-tab="wordpress">Wordpress</li>
                 </ul>
-                <div class="work-tabs-img__container">
+                <div class="work-tabs-img__container container">
                     
                 </div>
                 <button class="work__btn">Load More</button>
@@ -293,6 +292,7 @@
     <footer class="footer-section">
         <p class="copyright"></p>
     </footer>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./debug.js"></script>
 </body>
 </html>
