@@ -1,5 +1,6 @@
 const tabs = document.querySelector(".tabs");
 const workButton = document.getElementById('work__btn')
+const galleryButton = document.getElementById('gallery__btn')
 const workImgContainer = document.querySelector(".work-tabs-img__container");
 let linkName;
 $(".services-tabs-content li").first().css("display", "flex");
@@ -99,8 +100,27 @@ fetch("pictures.json")
       }
       //console.log(newdef);
     }
+    galleryButton.onclick = (event) => {
+      let galleryItems = 8;
+      const galleryContainer = document.querySelector('.gallery__img-container')
+      const elementList = [...document.querySelectorAll('.gallery .gallery__item')]
+      for (let i = galleryItems; i< galleryItems + 4; i++){
+        if (elementList[i]){
+          galleryContainer.style.height = '1500px'
+          elementList[i].style.display ='initial'
+        }
+      }
+      galleryItems += 4;
+
+      if (galleryItems >= elementList.length){
+        event.target.style.display = 'none'
+      }
+    }
+
   })
   .catch((error) => console.log(error));
+
+
 
 /**
  * IGNORE
